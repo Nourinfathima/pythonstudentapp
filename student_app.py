@@ -59,6 +59,15 @@ while True:
     elif(choice==4):
 
         print("update student selected")
+        admno = input('enter the adminnumber to be updated : ')
+        name = input('enter the name for the update: ')
+        #admo = input('enter the adminnumber')
+        rollno = input('enter the roll no to be updated : ')
+        college = input('enter the college name to be updated : ')
+        sql=  "UPDATE `students` SET `name`='"+name+"',`rollnumber`='"+rollno+"',`admno`='"+admno+"',`college`='"+college+"' WHERE 'admno'="+admno
+        mycursor.execute(sql)
+        mydb.commit()
+        print('Succesfully updated !!!')
 
     elif(choice==5):
 
