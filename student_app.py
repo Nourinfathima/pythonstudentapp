@@ -19,7 +19,17 @@ while True:
     choice = int(input("Enter an option: "))
     if(choice==1):
 
-        print("student enter selected")
+        print("add student details ")
+        name=input("enter the name")
+        rollnumber=input("enter the rollno")
+        admno = input("enter the adminno")
+        college = input("enter the college name")
+        sql ='INSERT INTO `studentS`(`name`, `rollnumber`, `admno`, `college`)VALUES(%s,%s,%s,%s)'
+        data = (name,rollnumber,admno,college)
+        mycursor.execute(sql , data)
+        mydb.commit()
+
+
         
     elif(choice==2):
 
