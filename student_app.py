@@ -72,6 +72,11 @@ while True:
     elif(choice==5):
 
         print("delete student selected")
+        admo = input('Enter the admin number to be deleting : ')
+        sql = 'DELETE FROM `students` WHERE `admno`='+admo
+        mycursor.execute(sql)
+        mydb.commit()
+        print('Deleted succesfully')
 
     elif(choice==6):
 
