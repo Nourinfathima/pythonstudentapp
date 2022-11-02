@@ -9,6 +9,7 @@ while True:
 
     print("2 view all student")
 
+
     print("3 search a student")
 
     print("4 update the student")
@@ -33,7 +34,8 @@ while True:
         
     elif(choice==2):
 
-        print('view student selected')
+        print('view all student')
+
 
         sql = 'SELECT * FROM `students`'
 
